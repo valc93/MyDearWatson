@@ -20,12 +20,12 @@ chroot () {
 }
 
 chrome () {
-	sh -e crouton -t xfce,keyboard,extension
+	sh -e ~/Downloads/crouton -r precise -t xfce,keyboard,extension
 	sudo enter-chroot -u root sh ~/Downloads/watson.sh c
 	cd /usr/local/bin
-	sudo cp startxfce4 startelementary
-	sudo sed -i 's/startxfce4/startelementary/' startelementary
-	sudo startelementary
+	sudo cp startxfce4 starteos
+	sudo sed -i 's/startxfce4/startelementary/' starteos
+	sudo starteos
     echo WELCOME TO PANTHEON
 }
 
